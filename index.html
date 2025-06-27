@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículum Yorman Gonzalez</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .sidebar {
+      background-color: #0A2740;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+    .main {
+      padding: 30px;
+      flex: 1;
+      min-width: 300px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      cursor: pointer;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section b {
+      display: block;
+      margin-top: 10px;
+    }
+    .contact-icon {
+      margin-right: 5px;
+    }
+    .hidden {
+      display: none;
+    }
+    .btn {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #0A2740;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #133b5c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="photo_2025-06-27_14-58-51.jpg" alt="Yorman Gonzalez">
+      <p><b>01/08/1997</b></p>
+      <h3>CONTACTO</h3>
+      <p>📞 04125841177</p>
+      <p>📧 yorman.gonzalez7991@gmail.com</p>
+      <hr>
+      <h3>FORTALEZAS</h3>
+      <p>Conocimientos en Sistemas Operativos</p>
+      <p>Trabajo Bajo Presión</p>
+      <button class="btn" onclick="descargarCV()">Descargar CV PDF</button>
+    </div>
+    <div class="main">
+      <h1>Yorman Gonzalez</h1>
+
+      <div class="section">
+        <h2 onclick="toggleSection('exp')">EXPERIENCIA LABORAL</h2>
+        <div id="exp">
+          <b>Ayudante de logística</b>
+          <p>Servifresco</p>
+          <b>Despachador</b>
+          <p>Servifresco</p>
+          <b>Atención al Cliente</b>
+          <p>Frigorifico Grades Hermanos</p>
+          <b>Operador De Cámaras de Vigilancia</b>
+          <p>Frigorifico Grades Hermanos</p>
+          <b>Mantenimientos</b>
+          <p>Frigorifico Grades Hermanos</p>
+          <b>Ayudante de Panadero</b>
+          <p>Panadería Merka Granja</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 onclick="toggleSection('edu')">DATOS ACADÉMICOS</h2>
+        <div id="edu">
+          <b>Bachiller</b>
+          <p>Carlos Emiliano Salom, 2016</p>
+          <b>Estudiante de Informática</b>
+          <p>U.B.V "Universidad Bolivariana de Venezuela" (Presente)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle("hidden");
+    }
+
+    function descargarCV() {
+      window.print();
+    }
+  </script>
+</body>
+</html>
